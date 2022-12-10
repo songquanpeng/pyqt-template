@@ -12,6 +12,7 @@ from ui import Ui_MainWindow
 config_file = "pyqt-template.ini"
 is_windows = os.name == "nt"
 use_shell = is_windows
+version = "v0.0.0"
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):

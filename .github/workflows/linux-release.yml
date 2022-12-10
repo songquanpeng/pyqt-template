@@ -21,6 +21,7 @@ jobs:
         run: |
           sudo apt-get install -y upx
           pip install -r requirements.txt
+          sed -i "s/v0.0.0/$(git describe --tags)/g" ./main.py
           pyinstaller --noconsole -F ./main.py --icon icon.png -n pyqt-template
       - name: Release
         uses: softprops/action-gh-release@v1
